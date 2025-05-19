@@ -1,5 +1,5 @@
 def get_user_debt_info():
-    print("Welcome to Dept Disha - Smart Debt Payoff Assistant")
+    print("Welcome to Debt Disha - Smart Debt Payoff Assistant")
 
     name = input("Enter your name: ")
     income = float(input("Enter your monthly income (in ₹): "))

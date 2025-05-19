@@ -1,22 +1,18 @@
 import { ExpoConfig, ConfigContext } from 'expo/config';
-import * as dotenv from 'dotenv';
-
-// Load environment variables from .env file
-dotenv.config();
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: 'Dept Disha',
+  name: 'Debt Disha',
   slug: 'deptdisha',
   version: '1.0.0',
   orientation: 'portrait',
-  icon: 'assets/images/app-logo.png',
-  scheme: 'myapp',
+  icon: './assets/images/app-logo.png',
+  scheme: 'deptdisha',
   userInterfaceStyle: 'automatic',
   splash: {
-    image: 'assets/images/cover.jpg',
+    image: './assets/images/splash.png',
     resizeMode: 'contain',
-    backgroundColor: '#ffffff'
+    backgroundColor: '#121212'
   },
   assetBundlePatterns: [
     '**/*'
@@ -27,26 +23,27 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   android: {
     adaptiveIcon: {
-      foregroundImage: 'assets/images/app-logo.png',
-      backgroundColor: '#ffffff'
+      foregroundImage: './assets/images/app-logo.png',
+      backgroundColor: '#121212'
     },
     package: 'com.deptdisha.app'
   },
   web: {
     bundler: 'metro',
     output: 'static',
-    favicon: 'assets/images/app-logo.png'
+    favicon: './assets/images/app-logo.png'
   },
   extra: {
-    supabaseUrl: process.env.EXPO_PUBLIC_SUPABASE_URL,
-    supabaseKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY,
+    router: {
+      origin: false
+    },
     eas: {
       projectId: 'a3a29a31-c51f-4b03-a955-7ef0380e397f'
     }
   },
   plugins: [
     'expo-router',
-    'expo-splash-screen'
+    'expo-font'
   ],
   experiments: {
     typedRoutes: true

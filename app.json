@@ -1,19 +1,20 @@
 {
   "expo": {
-    "name": "Dept Disha",
+    "name": "Debt Disha",
     "slug": "deptdisha",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "assets/images/app-logo.png",
-    "scheme": "myapp",
+    "icon": "./assets/images/optimized/app-logo.webp",
+    "scheme": "deptdisha",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "assets/images/cover.jpg",
+      "image": "./assets/images/optimized/splash.webp",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#121212"
     },
     "assetBundlePatterns": [
-      "**/*"
+      "assets/images/optimized/*.webp",
+      "assets/fonts/*"
     ],
     "ios": {
       "supportsTablet": true,
@@ -21,19 +22,19 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "assets/images/app-logo.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/optimized/app-logo.webp",
+        "backgroundColor": "#121212"
       },
       "package": "com.deptdisha.app"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "assets/images/app-logo.png"
+      "favicon": "./assets/images/optimized/app-logo.webp"
     },
     "plugins": [
       "expo-router",
-      "expo-splash-screen"
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
@@ -46,13 +47,12 @@
         "projectId": "a3a29a31-c51f-4b03-a955-7ef0380e397f"
       }
     },
-    "owner": "priyanshuakafenix",
     "runtimeVersion": {
       "policy": "appVersion"
     },
     "updates": {
       "url": "https://u.expo.dev/a3a29a31-c51f-4b03-a955-7ef0380e397f"
-    }
+    },
+    "owner": "priyanshuakafenix"
   }
 }
-
